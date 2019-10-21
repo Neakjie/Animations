@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.anima {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 20%;
+    border: 2px gray solid;
+    border-radius: 5px;
+    background-color: beige;
+    box-shadow: 2px 2px rgb(177, 172, 172);
+}
+
+ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+
+#a {
+    position: relative;
+    background: url("https://image.flaticon.com/icons/png/128/1374/1374137.png");
+    width: 100%;
+    background-position-x: center;
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#b {
+    position: relative;
+    background: url("https://image.flaticon.com/icons/png/128/1374/1374146.png");
+    width: 100%;
+    background-position-x: center;
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#c {
+    position: relative;
+    background: url("https://image.flaticon.com/icons/png/128/1374/1374158.png");
+    width: 100%;
+    background-position-x: center;
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+ul:hover {
+    cursor: pointer;
+    animation: myanimation 2s ease-out;
+}
+
+@keyframes myanimation {
+    0% {
+        right: 0;
+    }
+    100% {
+        display: none;
+        right: 200px;
+        visibility: hidden;
+    }
+}

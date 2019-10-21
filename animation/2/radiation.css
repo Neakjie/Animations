@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+    background-size: 400% 400%;
+    animation: gradientBG 50s ease infinite;
+}
+
+.icons {
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+}
+
+.out {
+    border-radius: 999px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    height: 100%;
+    border: 12px groove red;
+    display: table-cell;
+    border-radius: 999px;
+    animation: shows 10s linear infinite;
+}
+
+.bgimg {
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url("https://image.flaticon.com/icons/png/128/1374/1374118.png");
+    width: 100px;
+    height: 100px;
+    border: 24px groove red;
+    display: table-cell;
+    animation: myspinbox 50s linear infinite backwards;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes myspinbox {
+    from {
+        border-color: #ee7752;
+        transform: rotate(0deg);
+    }
+    15% {
+        border-color: #e73c7e;
+        transform: rotate(180deg);
+    }
+    30% {
+        border-color: #23a6d5;
+        transform: rotate(360deg);
+    }
+    50% {
+        border-color: #23d5ab;
+        transform: rotate(540deg);
+    }
+    75% {
+        border-color: #23a6d5;
+        transform: rotate(720deg);
+    }
+    90% {
+        border-color: #e73c7e;
+        transform: rotate(900deg);
+    }
+    to {
+        border-color: #ee7752;
+        transform: rotate(1080deg);
+    }
+}
+
+@keyframes shows {
+    from {
+        border-color: yellow;
+        transform: rotate(0deg);
+    }
+    50% {
+        border-color: red;
+        transform: rotate(180deg);
+    }
+    100% {
+        border-color: yellow;
+        transform: rotate(360deg);
+    }
+}
